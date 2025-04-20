@@ -235,6 +235,21 @@ body {
     display: flex !important;
 }
 
+main {
+    margin-left: 250px; /* 預設留出側邊欄空間 */
+    transition: margin-left 0.3s ease;
+  }
+  
+  .sidebar.collapsed ~ main {
+    margin-left: 0; /* 側邊欄收合時主內容填滿 */
+  }
+  
+  @media (max-width: 767.98px) {
+    main {
+      margin-left: 0; /* 小螢幕時主內容填滿 */
+    }
+  }
+  
 /* 響應式調整 */
 @media (max-width: 768px) {
     .main-content {
